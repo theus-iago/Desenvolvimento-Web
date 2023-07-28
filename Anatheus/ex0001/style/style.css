@@ -1,0 +1,24 @@
+body{
+background-color: rgb(131, 78, 180);
+color: white;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+#titulo1 {
+    color:rgb(62, 0, 112);
+}
+table {
+margin:5px;  
+padding:5px;  
+border: 2px solid pink;
+}
+#titulo2 {
+text-align: center;
+background-color: rgb(173, 83, 196);
+}
+td {
+background-color: rgb(192, 124, 255);
+
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 01</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"defer></script>
+</head>
+<body>
+    <h1 id="titulo1">Bem vindos</h1>
+   <table>
+    <tr> 
+        <td colspan="5" id="titulo2"><h1>Titulo</h1></td>
+    </tr>
+    <td rowspan="3"><h2>campo 9</h2></td>
+    <tr>
+        <td><h2>campo 1</h2></td> 
+        <td><h2>campo 2</h2></td> 
+        <td><h2>campo 3</h2></td>
+        <td><h2>campo 4</h2></td>
+    </tr>
+    <tr>
+        <td><h2>campo 5</h2></td>
+        <td><h2>campo 6</h2></td>
+        <td><h2>campo 7</h2></td>
+        <td><h2>campo 8</h2></td>
+    </tr>
+   </table>
+
+<label for="">digite seu campo</label>
+<input type="text" name="nome" id="campo">
+<button onclick="color()">Color</button>
+<button onclick="back()">Back</button>
+<script>
+    td= document.getElementsByTagName("td")[0];
+    campo= document.getElementById("td");
+    const color = () => {
+       for(cont=0;cont<11;cont++) {
+        td= document.getElementsByTagName("td")[cont].style.cssText="transition:background 2s; background-color:red;";
+         //if() {}  
+    }
+    }
+    const back = () => {
+        for(cont=0;cont<11;cont++) {
+        td= document.getElementsByTagName("td")[cont].style.cssText="transition:background 2s; background-color: rgb(192, 124, 255);";
+        }
+    }
+</script>
+</body>
+</html>
