@@ -1,0 +1,21 @@
+@mixin funcao() 
+  background-color: blue
+
+* 
+  margin:0
+  padding:0
+  box-sizing: border-box
+
+div 
+  @include funcao()
+  height: 500px
+  width: 500px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  transition: background, border 1s, 1s
+  &:active 
+    background-color: green
+    border-radius: 50%
+    transform: rotateY(-160deg)
