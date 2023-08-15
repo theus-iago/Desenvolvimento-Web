@@ -17,6 +17,8 @@
 			height:100vh;
 		}
 		.container {
+			height:300px;
+			width:300px;
 			position:absolute;
 			top:20%;
 			left:15%;
@@ -69,6 +71,28 @@
 				transform:rotateX(50deg) rotateY(380deg) rotateZ(150deg);
 			}
 		}
+		.btn {
+			height:50px;
+			width:50px;
+			background-color:#080542;
+			color:white;
+			border:none;
+			border-radius:8px;
+			outline:none;
+			padding:8px;
+		}
+		#btn_play {
+			position:absolute;
+			top:60%;
+			left:30%;
+			transform:translate(-30%,-60%);
+		}
+		#btn_stop {
+			position:absolute;
+			top:60%;
+			left:50%;
+			transform:translate(-50%,-60%);
+		}
 	</style>
 </head>
 <body>
@@ -88,16 +112,16 @@
 		<div class="loaders"></div>
 		<div class="loaders"></div>
 	</div>
-	<button onclick="play()">play</button>
-	<button onclick="stop()">Stop</button>
+	<button class="btn" id="btn_play" onclick="play()">play</button>
+	<button class="btn" id="btn_stop" onclick="stop()">Stop</button>
 	<script>
 	let box1 = document.getElementsByClassName("loaders")[0];
 	let box2 = document.getElementsByClassName("loaders")[1];
 	let box3 = document.getElementsByClassName("loaders")[2];
 		function play() {
-			box1.style.cssText = "transition:opacity 2s; opacity:100%; animation:rotate 1.4s infinite ease-out;";
-			box2.style.cssText = "transition:opacity 2s; opacity:100%; animation:rotate2 1.4s infinite ease-out;";
-			box3.style.cssText = "transition:opacity 2s; opacity:100%; animation:rotate3 1.4s infinite ease-out;";
+			box1.style.cssText = "transition:opacity 2s; opacity:100%; animation:rotate 0.8s infinite ease-out; animation-direction:alternate;";
+			box2.style.cssText = "transition:opacity 2s; opacity:100%; animation:rotate2 0.8s infinite ease-out; animation-direction:alternate;";
+			box3.style.cssText = "transition:opacity 2s; opacity:100%; animation:rotate3 0.8s infinite ease-out; animation-direction:alternate;";
 		}
 		function stop() {
 			box1.style.cssText = "transition:opacity 2s; opacity:0%; animation:rotate 5s infinite ease-out;";
