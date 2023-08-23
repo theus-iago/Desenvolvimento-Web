@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>teste</title>
+	<style>
+	   * {
+	   	margin:0;
+	   	box-sizing:border-box;
+	   }
+	   body {
+	   	background-color:white;
+	   	
+	   }
+	   section {
+	   	width:500px;
+	   	margin:50px auto;
+	   	display:flex;
+	   	align-items:center;
+	   	justify-content:center;
+	   }
+	   .face {
+	   	width:400px;
+	   	height:350px;
+	   	perspective:500px;
+	   }
+	   .front, .back {
+	   	display:flex;
+	   	align-items:center;
+	   	justify-content:center;
+	   	position:absolute;
+	   	width:70%;
+	   	height:100%;
+	   	padding:10px;
+	 	  border-radius:10px;
+	    transition:700ms;
+	   }
+	  .front {
+	  	background-color:limegreen;
+	  }
+	  .back {
+	  	background-color:lightslategray;
+	  	transform: rotateY(-180deg);
+	  	backface-visibility:hidden;
+	  }
+	 .face:hover .front{
+	 	transform: rotateY(180deg);
+	 }
+	 .face:hover .back{
+	 	transform: rotateY(0);
+	 }
+	</style>
+</head>
+<body>
+	<section>
+		<div class="face">
+    	<div class="front">
+				FRONT
+			</div> 
+			
+			<div class="back">
+				BACK
+			</div>
+		</div>
+	</section>
+</body>
+</html>
